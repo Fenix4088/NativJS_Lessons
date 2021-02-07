@@ -85,6 +85,7 @@ import {
         return currency.currencyName;
     });
 
+
     const changeCurrencyField = (e: React.ChangeEvent<HTMLInputElement>) => {
         let value = e.currentTarget.value;
         if (!isFinite(+value)) return;
