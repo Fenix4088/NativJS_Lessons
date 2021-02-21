@@ -1,5 +1,4 @@
 export const b = "lesson2";
-console.log('lesson 2');
 
 // Lexical environment
 // http://jsflow.org/docs/lex-env/
@@ -239,10 +238,10 @@ function superSum(n: number): any {
   return helper;
 }
 
-console.log(superSum(0))
+/*console.log(superSum(0))
 console.log(superSum(3)(2)(5)(3))
 console.log(superSum(3)(2,5,3))
-console.log(superSum(3)(2,5)(3,9))
+console.log(superSum(3)(2,5)(3,9))*/
 
 
 
@@ -253,7 +252,7 @@ console.log(superSum(3)(2,5)(3,9))
 
 // Task 06
 // написать функцию, которая повторяет функционал метода flat массива на всю глубину.
-console.log("Task 06 ---------");
+// console.log("Task 06 ---------");
 const testArr= [1, 2, 3, [1, 22, 44, [55, 17, 7]]];
 
 const myFlat = (arr: any): any => {
@@ -263,7 +262,7 @@ const myFlat = (arr: any): any => {
 };
 
 // myFlat(testArr);
-console.log(myFlat(testArr))
+// console.log(myFlat(testArr))
 
 // just a plug
 export default () => {};
