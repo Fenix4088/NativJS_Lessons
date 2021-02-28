@@ -1,6 +1,6 @@
 import axios from "axios";
 
-console.log("lesson 3");
+// console.log("lesson 3");
 
 // Event loop
 // https://learn.javascript.ru/event-loop
@@ -16,7 +16,7 @@ console.log("lesson 3");
 // https://habr.com/ru/company/oleg-bunin/blog/417461/?_ga=2.54695343.543933152.1602500664-1040035071.1596811661
 
 // just a plug
-const JSONPlaceholderConfig = {
+/*const JSONPlaceholderConfig = {
   baseURL: "https://jsonplaceholder.typicode.com",
   headers: {
     "Content-type": "application/json; charset=UTF-8",
@@ -50,7 +50,7 @@ const test = async () => {
   });
 };
 
-test();
+test();*/
 
 export default () => {};
 
