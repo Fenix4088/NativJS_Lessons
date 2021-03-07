@@ -168,8 +168,6 @@ result
     .then(console.log);*/
 
 
-
-
 // ! Tasks for interview PROMISES
 
 // ?Task 1
@@ -246,7 +244,6 @@ result
 // console.log(7);
 
 
-
 // ?Task 6
 
 // async function sleep(ms:number) {
@@ -299,5 +296,4 @@ result
 // just a plug
 export default () => {
 };
-
 
