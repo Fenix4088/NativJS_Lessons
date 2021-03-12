@@ -1,3 +1,5 @@
+import {log} from "util";
+
 console.log("Lesson 5");
 export let str = "lesson5";
 // Keyword - this
@@ -20,7 +22,6 @@ export let str = "lesson5";
 // https://learn.javascript.ru/call-apply-decorators
 // https://medium.com/@stasonmars/%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%BE-%D0%BE-%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D0%B0%D1%85-apply-call-%D0%B8-bind-%D0%BD%D0%B5%D0%BE%D0%B1%D1%85%D0%BE%D0%B4%D0%B8%D0%BC%D1%8B%D1%85-%D0%BA%D0%B0%D0%B6%D0%B4%D0%BE%D0%BC%D1%83-javascript-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA%D1%83-ddd5f9b06290
 
-
 //
 // //console.log(this);
 //
@@ -28,18 +29,18 @@ export let str = "lesson5";
 //     console.log('function f', this);
 // }
 //
-// //f();
-//
+// f();
+
 // let obj = { name: 'Eugene'};
 // obj.f = f;
-// //obj.f();
+// obj.f();
 // obj.k = function () {
 //     console.log('obj.k', this);
 //     f();
 //     setTimeout(function() {console.log('function setTimeout', this)}, 0);
 // }
-//
-// //obj.k();
+
+//obj.k();
 //
 // let arrow = () =>  console.log('arrow function', this);
 // function FF() {
@@ -128,9 +129,6 @@ export let str = "lesson5";
 // //obj2.dec2 = obj.dec2();
 // //obj2.dec2();
 //
-
-
-
 
 // * Task 01
 //? Дан объект someObj, реализуйте функцию greeting и присвойте ее ключу объекта с аналогичным именем.
@@ -226,17 +224,17 @@ console.groupEnd();*/
 //? у которого будут эти свойства и метод greeting из Task 01
 
 type TaskType = {
-    name: string;
-    age: number;
-    greeting?: Function;
-}
+  name: string;
+  age: number;
+  greeting?: Function;
+};
 
-function myFirstConstructorFunc(this:TaskType, name: string, age: number) {
-    this.name = name;
-    this.age = age;
-    this.greeting = function () {
-        return `My name is ${this.name}. I am ${this.age}`;
-    }
+function myFirstConstructorFunc(this: TaskType, name: string, age: number) {
+  this.name = name;
+  this.age = age;
+  this.greeting = function () {
+    return `My name is ${this.name}. I am ${this.age}`;
+  };
 }
 
 /*console.group("Task 04");
@@ -278,26 +276,25 @@ const helperObj: any = {
     this.age = newAge;
     console.log(`New object age is ${this.age}`);
   },
-
 };
 /*console.group("Task 06");
 helperObj.greeting = Two.sayHello.bind(helperObj);
 helperObj.greeting();
 console.groupEnd();*/
 
-
 // * Bind
 //? 1) Дана функция sumTwoNumbers, реализовать функцию bindNumber которая принимает функцию sumTwoNumbers и число, и
 //? возвращает другую функцию, которое также принимает число и возвращает сумму этих чисел. Замыкание использовать нельзя
 
-function sumTwoNumbers(a:number,b:number):number {return a + b}
+function sumTwoNumbers(a: number, b: number): number {
+  return a + b;
+}
 
 function bindNum(f: Function, n: number) {
   return f.bind(null, n);
 }
 
 let bindTen = bindNum(sumTwoNumbers, 10);
-
 
 /*console.group("Task 7.1");
 console.log(bindTen(50))
@@ -314,11 +311,9 @@ console.groupEnd()*/
 
 }*/
 
+console.group("Task 7.2");
 
-console.group("Task 7.2")
-
-console.groupEnd()
-
+console.groupEnd();
 
 // 3) Одной строкой установить с помощью helperObj объекту Two поле age в значение 30
 /*console.group("Task 7.3")
@@ -329,27 +324,24 @@ helperObj.setAge.call(Two, 30);
 console.groupEnd()*/
 
 //! 4) Создать метод hi у объекта One, который всегда вызывает метод greeting объекта helperObj от имени Two
-One.hi = function () {
+One.hi = function () {};
 
-}
-
-console.group("Task 7.4")
-One.hi()
-console.groupEnd()
+console.group("Task 7.4");
+One.hi();
+console.groupEnd();
 
 // Реализовать задачи 2-4 из Bind с помощью Call
 
-
 let obj = {
-  name: 'Eugen',
-  getName(arg:string, arg2:string) {
+  name: "Eugen",
+  getName(arg: string, arg2: string) {
     return `${this.name}, ${arg}, ${arg2}`;
-  }
-}
+  },
+};
 
 let obj2 = {
-  name: 'Vlad',
-}
+  name: "Vlad",
+};
 
 //@ts-ignore
 obj2.getName = obj.getName;
@@ -358,6 +350,15 @@ obj2.getName = obj.getName;
 //console.log(obj2.getName.call(obj, 'bla bla', 'Lo lo'));
 // console.log(obj2.getName.apply(obj, ['bla bla']));
 
+/* function f(a1: any, a2: any, a3: any) {
+  // ? Это самый выгодный способ сделать из ПСЕВДОМАССИВА массив(Женино видео 07.02.2021 1:39:21)
+  //  ? c точки зрения использования памяти ЕКОНОМИЯ ПАМЯТИ!!!!
+  //@ts-ignore
+  console.log([].forEach.call(arguments, (item => console.log(item))));
+
+}
+
+f(10, 20, 50)*/
 
 // just a plug
 export default () => {};
