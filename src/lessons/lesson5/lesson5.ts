@@ -1,4 +1,3 @@
-import {log} from "util";
 
 console.log("Lesson 5");
 export let str = "lesson5";
@@ -311,9 +310,9 @@ console.groupEnd()*/
 
 }*/
 
-console.group("Task 7.2");
+/*console.group("Task 7.2");
 
-console.groupEnd();
+console.groupEnd();*/
 
 // 3) Одной строкой установить с помощью helperObj объекту Two поле age в значение 30
 /*console.group("Task 7.3")
@@ -324,11 +323,11 @@ helperObj.setAge.call(Two, 30);
 console.groupEnd()*/
 
 //! 4) Создать метод hi у объекта One, который всегда вызывает метод greeting объекта helperObj от имени Two
-One.hi = function () {};
+/*One.hi = function () {};
 
 console.group("Task 7.4");
 One.hi();
-console.groupEnd();
+console.groupEnd();*/
 
 // Реализовать задачи 2-4 из Bind с помощью Call
 
