@@ -121,7 +121,7 @@ function getBestStudent(arr: Array<Student>) {
   arr.forEach((s) => !s.progress.some((m) => m < 4) && console.log(s));
 }
 
-console.group("Task 6.1");
+/*console.group("Task 6.1");
 
 students.sort((a, b) => {
   const middleA = a.progress.reduce((a, n) => a + n) / a.progress.length;
@@ -131,7 +131,7 @@ students.sort((a, b) => {
 console.log("Sorted bu average progress => ", students);
 getBestStudent(students);
 
-console.groupEnd();
+console.groupEnd();*/
 
 // Task 02
 // Создать класс с двумя переменными. Добавить конструктор с входными параметрами и инициализирующий члены класса по умолчанию.
@@ -148,9 +148,9 @@ class Test {
   }
 }
 
-console.group("Task 6.2");
+/*console.group("Task 6.2");
 console.log("??????????????????");
-console.groupEnd();
+console.groupEnd();*/
 
 // Task 03
 // Составить описание класса для представления времени. Предусмотреть возможности установки времени и изменения его отдельных
@@ -159,7 +159,7 @@ console.groupEnd();
 // Создать метод выводящий время в строке формата HH:MM:SS
 // Создать класс по вышеуказанному описанию
 
-class Time {
+/*class Time {
   date: Date;
 
   constructor(date: Date) {
@@ -203,7 +203,7 @@ time.setHours(21);
 time.setMinutes(59);
 time.getTime();
 
-console.groupEnd();
+console.groupEnd();*/
 
 // Task 04
 // Класс Покупатель: Фамилия, Имя, Адрес, Номер банковского счета;
@@ -211,7 +211,7 @@ console.groupEnd();
 // Создать массив объектов данного класса.
 // Вывести список покупателей в алфавитном порядке и список покупателей, у которых номер кредитной карточки находится в заданном диапазоне.
 
-class Customer {
+/*class Customer {
   surname: string;
   name: string;
   address: string;
@@ -286,14 +286,14 @@ console.log(
   "Filtered customer => ",
   getBankAccRange(400000000, 900000000, customerArr)
 );
-console.groupEnd();
+console.groupEnd();*/
 
 // Task 05
 // Создать класс машина - имеющий марку, число цилиндров, мощность. Определить конструктор и функцию печати.
 // Создать производный класс – грузовик, имеющий грузоподъемность кузова.
 // Определить функции переназначения марки и грузоподъемности.
 
-class Car {
+/*class Car {
   model: string;
   cylinders: number;
   power: number;
@@ -338,7 +338,7 @@ console.log(truck)
 
 console.groupEnd();
 
-console.log(Truck instanceof Car) //? why false?
+console.log(Truck instanceof Car) //? why false?*/
 
 // just a plug
 export default () => {};
