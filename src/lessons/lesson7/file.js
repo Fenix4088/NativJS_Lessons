@@ -20,6 +20,7 @@ function Monkey(name = "Monkey") {
   Animal.call(this, name);
   this.name = name;
 }
+Monkey.prototype = Object.create(Animal.prototype)
 
 Monkey.prototype.roar = function () {
   console.log(this.name + " " + "is roaring, Aaaahrrr");
@@ -33,6 +34,7 @@ function Human(name = "Human") {
   Monkey.call(this, name)
   this.name = name;
 }
+Human.prototype = Object.create(Monkey.prototype)
 
 Human.prototype.speak = function () {
   console.log(this.name + " " + "is speaking, Bla bla bla");
@@ -42,13 +44,14 @@ Human.prototype.think = function () {
   console.log(this.name + " " + "is thinking");
 }
 
-console.group("7.4 JS file");
+/*console.group("7.4 JS file");
 const animal = new Animal();
 animal.walk();
 animal.eat();
 animal.sleep();
 console.log("---------------");
 const monkey = new Monkey();
+console.log(monkey)
 monkey.walk();
 monkey.eat();
 monkey.sleep();
@@ -57,6 +60,7 @@ monkey.climb()
 
 console.log("---------------");
 const human = new Human();
+console.log(human)
 human.walk();
 human.eat();
 human.sleep();
@@ -64,10 +68,10 @@ human.roar();
 human.climb()
 human.speak()
 human.think()
-console.groupEnd()
+console.groupEnd()*/
 
 
-Function.prototype.myBind = function (context, ...args) {
+/*Function.prototype.myBind = function (context, ...args) {
   let newThis = this;
   return function () {
     return newThis.apply(context, args);
@@ -86,7 +90,7 @@ function func() {
 console.group("7.5 JS file");
 let funcUser = func.myBind(user);
 funcUser()
-console.groupEnd();
+console.groupEnd();*/
 
 
 //! Code from lesson 7
@@ -193,7 +197,7 @@ let obj2 = {
 // let res = f.bind(obj, 50).bind(obj2, 800);
 // res(10)
 
-let res2 = f.___bind(obj, 50).___bind(obj2, 800);
+// let res2 = f.___bind(obj, 50).___bind(obj2, 800);
 //res2(0)
 
 

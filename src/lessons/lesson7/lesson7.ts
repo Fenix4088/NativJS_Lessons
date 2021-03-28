@@ -39,12 +39,12 @@ class Animal {
 
 }
 
-console.group("7.1");
+/*console.group("7.1");
 const unicorn = new Animal("Unicorn")
 unicorn.walk()
 unicorn.eat()
 unicorn.sleep()
-console.groupEnd();
+console.groupEnd();*/
 
 //? Task 02
 //?  Реализовать класс Monkey на базе класса Animal,  конструктор принимает name(по умолчанию 'Monkey') в качестве
@@ -65,12 +65,12 @@ class Monkey extends Animal {
   }
 }
 
-console.group("7.2");
+/*console.group("7.2");
 const monkey = new Monkey();
 monkey.walk()
 monkey.roar()
 monkey.climb()
-console.groupEnd();
+console.groupEnd();*/
 //? Task 03
 //?  Реализовать класс Human на базе класса Monkey, конструктор принимает name(по умолчанию 'Human') в качестве
 //?  параметра, реализовать методы speak и think аналогично классу Animal
@@ -91,18 +91,18 @@ class Human extends Monkey {
 }
 
 
-console.group("7.3");
+// console.group("7.3");
 const human = new Human();
 // ! Почему не могу получить __proto__ без @ts-ignore??
 //@ts-ignore
-console.log(human.__proto__)
+// console.log(human.__proto__)
 // ! Почему нет human.prototype??
 //@ts-ignore
-console.log(human.prototype)
+/*console.log(human.prototype)
 human.walk()
 human.think()
 human.speak()
-console.groupEnd();
+console.groupEnd();*/
 
 //? Task 04
 //? Реализовать таски 01-03 через функции конструкторы в отдельном JS файле, реализовать наследование
